@@ -41,6 +41,7 @@ A system for analyzing hotel booking data and answering questions using analytic
 5. **Obtain Large Files:**
    Large files (hotel_bookings_with_embeddings.csv, hotel_booking_index.faiss) are not included in this repository due to GitHub’s size limits.
    Option 1: Download from Google Drive: https://drive.google.com/drive/folders/1_BQRfm4tbmxmGg0X2kR2XQsWuM1f_ltV?usp=drive_link
+
    Option 2: Generate them by running:
    ```bash
    python Data_cleaning.py
@@ -49,11 +50,11 @@ A system for analyzing hotel booking data and answering questions using analytic
    Place these files in the project root directory (hotel-booking-analytics/).
 ### Running the System
    **Data Preparation:**
-      Cleaning and Visualization:
+      **Cleaning and Visualization:**
          ```bash
          python Data_cleaning.py
          ```
-      Generate Embeddings and FAISS Index:
+      **Generate Embeddings and FAISS Index:**
          ```bash
          python embeddings_faiss.py
          ```
@@ -68,11 +69,11 @@ A system for analyzing hotel booking data and answering questions using analytic
       ```
       Access Swagger UI at: http://127.0.0.1:8000/docs
    **Evaluation:**
-      Q&A Accuracy:
+      **Q&A Accuracy:**
          ```bash
          python evaluate_qa.py
          ```
-      Performance Benchmark:
+      **Performance Benchmark:**
          ```bash
          python benchmark_api.py
          ```
