@@ -48,35 +48,37 @@ A system for analyzing hotel booking data and answering questions using analytic
    python embeddings_faiss.py
    ```
    Place these files in the project root directory (hotel-booking-analytics/).
+
 ### Running the System
-   **Data Preparation:**
-      **Cleaning and Visualization:**
-         ```bash
-         python Data_cleaning.py
-         ```
-      **Generate Embeddings and FAISS Index:**
-         ```bash
-         python embeddings_faiss.py
-         ```
-   **Streamlit App:**
-      ```bash
-      streamlit run app.py --server.fileWatcherType=none
-      ```
-      Access at: http://localhost:8501
-   **FastAPI Server:**
-      ```bash
-      uvicorn api:app --reload
-      ```
-      Access Swagger UI at: http://127.0.0.1:8000/docs
-   **Evaluation:**
-      **Q&A Accuracy:**
-         ```bash
-         python evaluate_qa.py
-         ```
-      **Performance Benchmark:**
-         ```bash
-         python benchmark_api.py
-         ```
+   
+**Data Preparation:**
+   **Cleaning and Visualization:**
+   ```bash
+   python Data_cleaning.py
+   ```
+   **Generate Embeddings and FAISS Index:**
+   ```bash
+   python embeddings_faiss.py
+   ```
+**Streamlit App:**
+   ```bash
+   streamlit run app.py --server.fileWatcherType=none
+   ```
+   Access at: http://localhost:8501
+**FastAPI Server:**
+   ```bash
+   uvicorn api:app --reload
+   ```
+   Access Swagger UI at: http://127.0.0.1:8000/docs
+**Evaluation:**
+   **Q&A Accuracy:**
+   ```bash
+   python evaluate_qa.py
+   ```
+   **Performance Benchmark:**
+   ```bash
+   python benchmark_api.py
+   ```
 ## Sample Test Queries & Expected Answers
 
 ### API: POST /ask
