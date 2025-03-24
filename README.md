@@ -83,23 +83,29 @@ A system for analyzing hotel booking data and answering questions using analytic
 
 ### API: POST /ask
    Query: {"question": "What’s the total revenue for July 2016?"}
-      Expected: {"Total Revenue": "$1525019.05", "Month": "July", "Year": "2016"}
+   Expected: {"Total Revenue": "$1525019.05", "Month": "July", "Year": "2016"}
+   
    Query: {"question": "What’s the cancellation rate?"}
-      Expected: {"Cancellation Rate": "37.04%"}
+   Expected: {"Cancellation Rate": "37.04%"}
+   
    Query: {"question": "Which country has the highest booking cancellations?"}
-      Expected: {"Location with Highest Cancellations": "PRT", "Total Cancellations": 27519}
+   Expected: {"Location with Highest Cancellations": "PRT", "Total Cancellations": 27519}
+   
    Query: {"question": "Why do people cancel bookings?"}
-      Expected: {"answer": "Based on the limited data... potential factors include lead time, seasonality..."} (paraphrased; see full response in evaluation)
+   Expected: {"answer": "Based on the limited data... potential factors include lead time, seasonality..."} (paraphrased; see full response in evaluation)
+   
    Query: {"question": "What’s the busiest month for bookings?"}
-      Expected: {"answer": "Based on limited data, June and December..."} (may vary with full dataset)
+   Expected: {"answer": "Based on limited data, June and December..."} (may vary with full dataset)
 
 ### API: POST /analytics
    Query: {"report_type": "revenue_trends"}
-      Expected: List of {"arrival_date": "<date>", "revenue": <value>} (e.g., [{"arrival_date": "2015-07-01T00:00:00", "revenue": 123456.78}, ...])
+   Expected: List of {"arrival_date": "<date>", "revenue": <value>} (e.g., [{"arrival_date": "2015-07-01T00:00:00", "revenue": 123456.78}, ...])
+   
    Query: {"report_type": "cancellation_rate"}
-      Expected: {"cancellation_rate": "37.04%"}
+   Expected: {"cancellation_rate": "37.04%"}
+   
    Query: {"report_type": "top_locations"}
-      Expected: Dictionary of top 10 countries (e.g., {"PRT": 48590, "GBR": 12129, ...})
+   Expected: Dictionary of top 10 countries (e.g., {"PRT": 48590, "GBR": 12129, ...})
 
 ### Notes
    Data Source: Derived from a hotel bookings dataset (e.g., Kaggle). Raw data not included in GitHub; use Google Drive link or generate via scripts.
